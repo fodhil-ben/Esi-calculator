@@ -24,7 +24,8 @@ function Calculator({ level }) {
     }, [level])
 
     useEffect(() => {
-        fetch("../api/api.json").then(
+        // fetch("../api/api.json").then(
+        fetch("https://github.com/fodhil-ben/Esi-calculator/blob/master/api/api.json").then(
             res => res.json()
         ).then((jsonData) => {
             setData(jsonData)
