@@ -1,9 +1,14 @@
+import { useEffect } from "react"
+
 function Select({ selected, setSelected }) {
 
 
     const handleSelect = (e) => {
         setSelected(e.target.value)
     }
+
+
+
 
     return (
         <div className="select">

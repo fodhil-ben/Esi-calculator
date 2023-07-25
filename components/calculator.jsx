@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 
-function Calculator({ level }) {
+function Calculator({ level, data }) {
 
-    const [data, setData] = useState({})
     const [results, setResults] = useState([...Array(6).fill(0)])
-
     const [avg, setAvg] = useState(Array(8).fill(0))
     const [emd1, setEmd1] = useState(Array(8).fill(0))
     const [emd2, setEmd2] = useState(Array(8).fill(0))
@@ -23,15 +21,7 @@ function Calculator({ level }) {
         localStorage.setItem('tp', JSON.stringify([]))
     }, [level])
 
-    useEffect(() => {
-        // fetch("../api/api.json").then(
-        fetch("https://github.com/fodhil-ben/Esi-calculator/blob/master/api/api.json").then(
-            res => res.json()
-        ).then((jsonData) => {
-            setData(jsonData)
-        }
-        ).catch(err => console.log(err))
-    }, [])
+
 
     useEffect(() => {
         let saved = JSON.parse(localStorage.getItem('emd1')) || []
