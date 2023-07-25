@@ -1,3 +1,3 @@
-# average calculator
+#  Esi Calculator
 
-average calculator using react.js
+Esi Calculator using react.js
